@@ -4,8 +4,8 @@ export const SITE: Site = {
   website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
   author: "Gabs Ferreira",
   desc: "Site show feito pelo Gabs e galerinha das internets",
-  title: "AstroPaper",
-  ogImage: "astropaper-og.jpg",
+  title: "Gabs Ferreira",
+  ogImage: "Background.png",
   lightAndDarkMode: true,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
@@ -17,8 +17,8 @@ export const LOCALE = {
 } as const;
 
 export const LOGO_IMAGE = {
-  enable: false,
-  svg: true,
+  enable: true,
+  svg: false,
   width: 216,
   height: 46,
 };
@@ -27,19 +27,19 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Github",
     href: "https://github.com/gabsferreira",
-    linkTitle: ` ${SITE.title} on Github`,
+    linkTitle: `Me segue no Github`,
     active: true,
   },
   {
     name: "Instagram",
-    href: "https://github.com/o_gabsferreira",
-    linkTitle: `${SITE.title} on Instagram`,
+    href: "https://instagram.com/o_gabsferreira",
+    linkTitle: `Me segue no Instagram`,
     active: true,
   },
   {
     name: "LinkedIn",
-    href: "https://github.com/gabsferreira",
-    linkTitle: `${SITE.title} on LinkedIn`,
+    href: "https://www.linkedin.com/in/gabsferreira/",
+    linkTitle: `Me segue no LinkedIn`,
     active: true,
   },
   {
@@ -50,20 +50,20 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Twitter",
-    href: "https://github.com/o_gabsferreira",
-    linkTitle: `${SITE.title} on Twitter`,
+    href: "https://twitter.com/o_gabsferreira",
+    linkTitle: `Me segue no Twitter`,
     active: false,
   },
   {
     name: "Twitch",
-    href: "https://github.com/ogabsferreira",
-    linkTitle: `${SITE.title} on Twitch`,
+    href: "https://twitch.com/ogabsferreira",
+    linkTitle: `Assista minhas lives no Twitch`,
     active: true,
   },
   {
     name: "YouTube",
     href: "https://youtube.com/gabsferreira",
-    linkTitle: `${SITE.title} on YouTube`,
+    linkTitle: `Me siga no YouTube`,
     active: true,
   },
   {
@@ -86,9 +86,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "TikTok",
-    href: "https://github.com/gabsferreira",
-    linkTitle: `${SITE.title} on TikTok`,
-    active: false,
+    href: "https://www.tiktok.com/@o_gabsferreira",
+    linkTitle: `Me segue no TikTok`,
+    active: true,
   },
   {
     name: "CodePen",
@@ -98,9 +98,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Discord",
-    href: "https://github.com/gabsferreira",
-    linkTitle: `${SITE.title} on Discord`,
-    active: false,
+    href: "https://discord.gg/7r4WhA7q",
+    linkTitle: `Participe do meu servidor no Discord`,
+    active: true,
   },
   {
     name: "GitLab",

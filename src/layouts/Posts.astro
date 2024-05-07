@@ -19,7 +19,8 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 
 <Layout title={`Posts | ${SITE.title}`}>
   <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="Todos os meus artigos.">
+  <!-- <Main pageTitle="Artigos" pageDesc="Todos os meus artigos."> -->
+  <Main pageTitle="Artigos">
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (

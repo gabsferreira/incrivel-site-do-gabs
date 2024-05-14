@@ -20,14 +20,15 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 
-console.log(import.meta.env.TURSO_DATABASE_URL);
+// Código para se conectar com o banco da Turso
+// console.log(import.meta.env.TURSO_DATABASE_URL);
 
-const client = createClient({
-  url: import.meta.env.TURSO_DATABASE_URL ?? "",
-  authToken: import.meta.env.TURSO_AUTH_TOKEN,
-});
+// const client = createClient({
+//   url: import.meta.env.TURSO_DATABASE_URL ?? "",
+//   authToken: import.meta.env.TURSO_AUTH_TOKEN,
+// });
 
-var tabela = await client.execute("SELECT * FROM users");
+// var tabela = await client.execute("SELECT * FROM users");
 ---
 
 <Layout>
@@ -35,14 +36,6 @@ var tabela = await client.execute("SELECT * FROM users");
   <main id="main-content">
     <section id="hero">
       <h1>Gabs Ferreira</h1>
-      {
-        tabela.rows.map(element => (
-          <>
-            <p> {element.name} </p>
-            <p> {element.email} </p>
-          </>
-        ))
-      }
       <a
         target="_blank"
         href="/rss.xml"

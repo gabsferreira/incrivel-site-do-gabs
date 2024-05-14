@@ -1,0 +1,77 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { SOCIALS } from "@config";
+
+import { Image } from "astro:assets";
+import logoOlaGabs from "../assets/images/podcasts/capa_olagabs.jpg";
+import PodcastLinks from "@components/PodcastLinks.astro";
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="hero">
+      <div class="flex w-full mx-auto justify-center">
+        <Image
+          src={logoOlaGabs}
+          width={logoOlaGabs.width / 3}
+          densities={[1.5, 2]}
+          alt="Capa do podcast Olá, Gabs. Ilustração no estilo naive art de um homem branco de cabelos castanhos ondulados. Ele usa um óculos quadrado com bordas arredondadas. Tem um bigode também castanho e parece estar olhando para você. Ele usa headphones brancos e no fundo vê-se estrelas e planetas, como se ele estivesse no espaço. Na parte de baixo, está escrito Olá, Gabs em uma fonte branca com efeito azulado."
+          format="avif"
+          quality="mid"
+        />
+      </div>
+      <p>
+        Reflexões sobre a vida em um universo em constante transformação,
+        compartilhadas através de histórias inspiradoras e discussões
+        envolventes que colocam as pessoas em primeiro plano.
+      </p>
+      <p>Um podcast que vai melhorar seu dia.</p>
+      <PodcastLinks />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-6 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon {
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+  .social-wrapper {
+    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+  #featured,
+  #recent-posts {
+    @apply pb-6 pt-12;
+  }
+  #featured h2,
+  #recent-posts h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }
+</style>

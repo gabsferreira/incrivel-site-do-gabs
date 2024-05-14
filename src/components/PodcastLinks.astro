@@ -1,0 +1,39 @@
+---
+import LinkButton from "./LinkButton.astro";
+
+const estiloLinks =
+  "underline decoration-wavy decoration-2 underline-offset-4 p-4 flex flex-row items-center justify-evenly";
+---
+
+<div>
+  <ul>
+    <li>
+      <LinkButton
+        className={estiloLinks}
+        target="_blank"
+        href="https://www.youtube.com/playlist?list=PLICwhyuOWoziSGRCetb_ft7XnswL5kT5y"
+        >Youtube</LinkButton>
+    </li>
+    <li>
+      <LinkButton
+        className={estiloLinks}
+        target="_blank"
+        href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zMjdiMTZmMC9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwiI1Lbhi9f-AhUAAAAAHQAAAAAQAQ"
+        >Google</LinkButton>
+    </li>
+    <li>
+      <LinkButton
+        className={estiloLinks}
+        target="_blank"
+        href="https://podcasts.apple.com/br/podcast/ol%C3%A1-gabs/id1684130586"
+        >Apple</LinkButton>
+    </li>
+    <li>
+      <LinkButton
+        className={estiloLinks}
+        target="_blank"
+        href="https://open.spotify.com/show/094hX276k5lFzM8Ig2xpsl?si=e07daf49df83494e&nd=1&dlsi=1c7bd8c2e14e4d64"
+        >Spotify</LinkButton>
+    </li>
+  </ul>
+</div>

@@ -6,9 +6,17 @@ export interface Props {
   title?: string;
   disabled?: boolean;
   newWindow?: string;
+  target?: string;
 }
 
-const { href, className, ariaLabel, title, disabled = false } = Astro.props;
+const {
+  href,
+  className,
+  ariaLabel,
+  title,
+  disabled = false,
+  target,
+} = Astro.props;
 ---
 
 {
@@ -33,3 +41,9 @@ const { href, className, ariaLabel, title, disabled = false } = Astro.props;
     </a>
   )
 }
+
+<style>
+  a.active {
+    @apply underline decoration-wavy decoration-2 underline-offset-4 p-4 flex flex-row items-center justify-evenly;
+  }
+</style>
